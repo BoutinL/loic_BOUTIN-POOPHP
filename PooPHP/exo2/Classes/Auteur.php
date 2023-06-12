@@ -34,7 +34,9 @@ Class Auteur{
 	// Méthode qui permet d’afficher la bibliographie complète d’un auteur
 
 	public function afficherBibliographie(){
-		
+		foreach($this->_livres as $livre){
+			echo $livre;
+		}
 	}
 
 	// Méthode qui ajoute un livre au tableau de son auteur
