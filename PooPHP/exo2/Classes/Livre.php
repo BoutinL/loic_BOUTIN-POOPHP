@@ -15,6 +15,7 @@ Class Livre{
 		$this->_parution = $parution;
 		$this->_prix = $prix;
 		$this->_auteur = $auteur;
+		$this->_auteur->ajouterLivre($this);
 	}
 
 	// Getter / Setter 
@@ -57,12 +58,6 @@ Class Livre{
 
 	public function setAuteur(Auteur $auteur){
 		$this->_auteur= $auteur;
-	}
-
-	// Méthode qui ajoute un livre au tableau de son auteur
-
-	public function ajouterLivre(){
-		array_push($livres,$livre);
 	}
 
 	// toString
