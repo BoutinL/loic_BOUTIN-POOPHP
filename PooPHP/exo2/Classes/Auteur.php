@@ -6,10 +6,10 @@ Class Auteur{
 	private string $_prenom;
 	private array $_livres;
 
-	public function __construct(string $nom, string $prenom, array $livres){
+	public function __construct(string $nom, string $prenom){
 		$this->_nom = $nom;
 		$this->_prenom = $prenom;
-		$this->_livres = $livres;
+		$this->_livres = [];
 	}
 
 	// Getter / Setter 
@@ -27,13 +27,13 @@ Class Auteur{
 	}
 
 	public function setPrenom(string $prenom){
-		$this->_prenom = prenom;
+		$this->_prenom = $prenom;
 	}
 
 	// toString
 
 	public function __toString(){
-		
+		return $this->getPrenom()." ".$this->getNom();
 	}
 	
 }
