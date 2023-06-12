@@ -1,5 +1,6 @@
 <?php
 
+
 Class Auteur{
 
 	private string $_nom;
@@ -28,6 +29,12 @@ Class Auteur{
 
 	public function setPrenom(string $prenom){
 		$this->_prenom = $prenom;
+	}
+
+	// Méthode qui permet d’afficher la bibliographie complète d’un auteur
+
+	public function afficherBibliographie(){
+		echo $livres;
 	}
 
 	// toString

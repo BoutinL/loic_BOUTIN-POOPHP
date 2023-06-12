@@ -1,5 +1,6 @@
 <?php
 
+
 Class Livre{
 
 	private string $_titre;
@@ -54,14 +55,20 @@ Class Livre{
 		return $this->_auteur;
 	}
 
-	public function setAuteur(){
-		
+	public function setAuteur(Auteur $auteur){
+		$this->_auteur= $auteur;
+	}
+
+	// Méthode qui ajoute un livre au tableau de son auteur
+
+	public function ajouterLivre(){
+		array_push($livres,$livre);
 	}
 
 	// toString
 
 	public function __toString(){
-		return $this->getTitre()." (".$this->getParution().") : ".$this->getPage()." / ".$this->getPrix()." €";
+		return $this->getTitre()." (".$this->getParution().") : ".$this->getPage()." / ".$this->getPrix()." €<br/>";
 	}
 	
 }
