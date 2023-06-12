@@ -2,10 +2,38 @@
 
 Class Auteur{
 
-	private string $_titre;
-	private string $_page;
-	private string $_parution;
-	private string $_prix;
-	private string $_auteur;
+	private string $_nom;
+	private string $_prenom;
+	private array $_livres;
+
+	public function __construct(string $nom, string $prenom, array $livres){
+		$this->_nom = $nom;
+		$this->_prenom = $prenom;
+		$this->_livres = $livres;
+	}
+
+	// Getter / Setter 
+
+	public function getNom(){
+		return $this->_nom;
+	}
+
+	public function setNom(string $nom){
+		$this->_nom = $nom;
+	}
+
+	public function getPrenom(){
+		return $this->_prenom;
+	}
+
+	public function setPrenom(string $prenom){
+		$this->_prenom = prenom;
+	}
+
+	// toString
+
+	public function __toString(){
+		
+	}
 	
 }
