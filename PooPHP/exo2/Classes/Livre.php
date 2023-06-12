@@ -64,7 +64,7 @@ Class Livre{
 	// toString
 
 	public function __toString(){
-		return $this->getTitre()." (".$this->getParution().") : ".$this->getPage()." / ".$this->getPrix()." €<br/>";
+		return $this->getTitre()." (".$this->getParution().") : ".$this->getPage()." pages / ".$this->getPrix()." €<br/>";
 	}
 	
 }
