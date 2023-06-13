@@ -51,14 +51,14 @@ Class Compte{
 
 	// Méthode pour créditer un compte
 
-	public function créditerCompte(Compte $compte1){
+	public function crediterCompte(){
 		
 	}
 
 	// toString
 
-	public function __toString(){
+	// public function __toString(){
 
-	}
+	// }
 
 }

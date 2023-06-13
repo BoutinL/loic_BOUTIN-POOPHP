@@ -14,4 +14,3 @@ $compte1 = new Compte("compte courant", 200, "$", $titulaire1);
 $compte2 = new Compte("livret A", 100, "$", $titulaire1);
 
 var_dump($titulaire1);
-var_dump($compte1);

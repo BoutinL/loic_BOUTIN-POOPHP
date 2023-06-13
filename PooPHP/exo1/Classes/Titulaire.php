@@ -65,7 +65,7 @@ Class Titulaire{
 
 	// toString
 
-	public function __toString(){
+	// public function __toString(){
 
-	}
+	// }
 }
