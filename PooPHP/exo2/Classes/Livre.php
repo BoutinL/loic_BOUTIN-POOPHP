@@ -1,6 +1,6 @@
 <?php
 
-
+ 
 Class Livre{
 
 	private string $_titre;
@@ -16,10 +16,9 @@ Class Livre{
 		$this->_prix = $prix;
 		$this->_auteur = $auteur;
 		$this->_auteur->ajouterLivre($this);
-		$this->_auteur->afficherBibliographie();
 	}
 
-	// Getter / Setter 
+	// Getter / Setter
 
 	public function getTitre(){
 		return $this->_titre;
