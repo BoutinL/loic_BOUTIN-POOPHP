@@ -10,9 +10,8 @@ spl_autoload_register(function ($class_name) {
 
 $titulaire1 = new Titulaire("King", "Stephen", "21-09-1947","Portland");
 
-$compte1 = new Compte("compte courant", 200, "$");
-$compte2 = new Compte("livret A", 100, "$");
+$compte1 = new Compte("compte courant", 200, "$", $titulaire1);
+$compte2 = new Compte("livret A", 100, "$", $titulaire1);
 
 var_dump($titulaire1);
-
 var_dump($compte1);

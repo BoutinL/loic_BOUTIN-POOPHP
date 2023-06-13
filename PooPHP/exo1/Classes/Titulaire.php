@@ -5,15 +5,14 @@ Class Titulaire{
 	private string $_prenom;
 	private DateTime $_datenaissance;
 	private string $_ville;
-	private Compte $_compte;
+	private array $_comptes;
 
 	public function __construct(string $nom, string $prenom, string $datenaissance, string $ville){
 		$this->_nom = $nom;
 		$this->_prenom = $prenom;
 		$this->_datenaissance = new DateTime($datenaissance);
 		$this->_ville = $ville;
-		$this->_compte = [];
-		$this->_compte->ajouterCompte($this);
+		$this->_comptes = [];
 	}
 
 	// Getter / Setter
@@ -51,17 +50,17 @@ Class Titulaire{
 	}
 
 	public function getCompte(){
-		return $this->_compte;
+		return $this->_comptes;
 	}
 
-	public function setCompte(Compte $compte){
-		$this->_compte = $compte;
+	public function setCompte(array $comptes){
+		$this->_comptes = $comptes;
 	}
 
-	// Méthode pour ajouter un comtpe au titulaire
+	// Méthode pour ajouter un compte au titulaire
 
-	public function ajouterCompte(Compte $compte){
-		array_push($this->_compte,$compte);
+	public function ajouterCompte(Compte $compte1){
+		array_push($this->_comptes, $compte1);
 	}
 
 	// toString

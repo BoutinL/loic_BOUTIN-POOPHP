@@ -7,10 +7,12 @@ Class Compte{
 	private string $_devise;
 	private Titulaire $_titulaire;
 
-	public function __construct(string $libele, float $soldeini, string $devise){
+	public function __construct(string $libele, float $soldeini, string $devise, Titulaire $titulaire){
 		$this->_libele = $libele;
 		$this->_soldeini = $soldeini;
 		$this->_devise = $devise;
+		$this->_titulaire = $titulaire;
+		$this->_titulaire->ajouterCompte($this);
 	}
 
 	// Getter / Setter
@@ -43,8 +45,14 @@ Class Compte{
 		return $this->_titulaire;
 	}
 
-	public function setTitulaire(Titulaire $titulaire){
+	public function setTitulaire(array $titulaire){
 		$this->_titulaire= $titulaire;
+	}
+
+	// Méthode pour créditer un compte
+
+	public function créditerCompte(Compte $compte1){
+		
 	}
 
 	// toString
