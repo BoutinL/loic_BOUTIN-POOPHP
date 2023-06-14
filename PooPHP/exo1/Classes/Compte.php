@@ -45,14 +45,27 @@ Class Compte{
 		return $this->_titulaire;
 	}
 
-	public function setTitulaire(array $titulaire){
+	public function setTitulaire(Titulaire $titulaire){
 		$this->_titulaire= $titulaire;
 	}
 
 	// Méthode pour créditer un compte
 
-	public function crediterCompte(){
-		
+	public function crediterCompte(float $montant){
+		$this->_soldeini+=$montant;
+	}
+
+	// Méthode pour débiter un compte
+
+	public function debiterCompte(float $montant){
+		$this->_soldeini-=$montant;
+	}
+
+	// Méthode pour effectuer un virement ( compte débiter vers compte a verser + somme )
+
+	public function virement(Compte $compte, float $montant){
+		$this->_soldeini-=$montant;
+		$compte->_soldeini+=$montant;
 	}
 
 	// toString

@@ -25,7 +25,7 @@ Class Titulaire{
 		$this->_nom = $nom;
 	}
 
-	public function getPrenom(string $prenom){
+	public function getPrenom(){
 		return $this->_prenom;
 	}
 
@@ -49,7 +49,7 @@ Class Titulaire{
 		$this->_ville = $ville;
 	}
 
-	public function getCompte(){
+	public function getComptes(){
 		return $this->_comptes;
 	}
 
@@ -65,7 +65,7 @@ Class Titulaire{
 
 	// toString
 
-	// public function __toString(){
-
-	// }
+	public function __toString(){
+		return "Titulaire: ".$this->getNom()." ".$this->getPrenom()."<br/>Date de naissance: ".$this->getDatenaissance()." à ".$this->getVille()."<br/> Comptes: ".$this->getComptes();
+	}
 }

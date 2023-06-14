@@ -13,4 +13,22 @@ $titulaire1 = new Titulaire("King", "Stephen", "21-09-1947","Portland");
 $compte1 = new Compte("compte courant", 200, "$", $titulaire1);
 $compte2 = new Compte("livret A", 100, "$", $titulaire1);
 
-var_dump($titulaire1);
+// Créditer un compte 
+$compte1->crediterCompte(50);
+echo "Solde du compte1: ".$compte1->getsoldeini()."$<br/>";
+
+// Débiter un compte 
+$compte2->debiterCompte(50);
+echo "Solde du compte2: ".$compte2->getsoldeini()."$<br/>";
+
+// Faire un virement
+$compte1->virement($compte2, 100);
+echo "Solde du compte1: ".$compte1->getsoldeini()."$ / ";
+echo "Solde du compte2: ".$compte2->getsoldeini()."$<br/>";
+
+// Afficher un titulaire
+
+echo $titulaire1;
+
+// Afficher les informations d'un compte bancaire
+
