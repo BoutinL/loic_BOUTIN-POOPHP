@@ -32,4 +32,7 @@ echo "$titulaire1<br/><br/>";
 
 // Afficher les informations d'un compte bancaire
 
-echo "$compte1<br/><br/>";
+// echo "$compte1<br/><br/>";
+
+// echo "$compte2<br/><br/>";
+

@@ -53,19 +53,28 @@ Class Titulaire{
 		return $this->_comptes;
 	}
 
-	public function setCompte(array $comptes){
+	public function setComptes(array $comptes){
 		$this->_comptes = $comptes;
 	}
 
 	// Méthode pour ajouter un compte au titulaire
 
-	public function ajouterCompte(Compte $compte1){
-		array_push($this->_comptes, $compte1);
+	public function ajouterCompte(Compte $compte){
+		array_push($this->_comptes, $compte);
 	}
 
 	// toString
+	private function listingComptes() : string
+	{
+		$result = "-------------------------<br/>";
+		foreach($this->_comptes as $compte){
+			$result .= $compte ."<br/>";
+		}
+		$result .= "-------------------------";
+		return $result;
+	} 
 
 	public function __toString(){
-		return "Titulaire: ".$this->getNom()." ".$this->getPrenom()."<br/>Date de naissance: ".$this->getDatenaissance()->format('Y-m-d')."<br/>Lieu de naissance: ".$this->getVille()."<br/> Comptes: ".$this->getComptes();
+		return "Titulaire: ".$this->getNom()." ".$this->getPrenom()."<br/>Date de naissance: ".$this->getDatenaissance()->format('Y-m-d')."<br/>Lieu de naissance: ".$this->getVille()."<br/> Comptes: ".$this->listingComptes();
 	}
 }

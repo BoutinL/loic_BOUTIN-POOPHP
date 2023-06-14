@@ -71,7 +71,7 @@ Class Compte{
 	// toString
 
 	public function __toString(){
-		return "Libellé: ".$this->getLibelle()."<br/>Solde du compte: ".$this->getSoldeini()." ".$this->getDevise()."<br/>".$this->getTitulaire();
+		return "Libellé: ".$this->getLibelle()."<br/>Solde du compte: ".$this->getSoldeini()." ".$this->getDevise()."<br/> Titulaire: ".$this->getTitulaire()->getNom()." ".$this->getTitulaire()->getPrenom();
 	}
 
 }
