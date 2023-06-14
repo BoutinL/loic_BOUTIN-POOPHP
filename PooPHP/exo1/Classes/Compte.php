@@ -2,13 +2,13 @@
 
 Class Compte{
 
-	private string $_libele;
+	private string $_libelle;
 	private float $_soldeini;
 	private string $_devise;
 	private Titulaire $_titulaire;
 
-	public function __construct(string $libele, float $soldeini, string $devise, Titulaire $titulaire){
-		$this->_libele = $libele;
+	public function __construct(string $libelle, float $soldeini, string $devise, Titulaire $titulaire){
+		$this->_libelle = $libelle;
 		$this->_soldeini = $soldeini;
 		$this->_devise = $devise;
 		$this->_titulaire = $titulaire;
@@ -17,12 +17,12 @@ Class Compte{
 
 	// Getter / Setter
 
-	public function getLibele(){
-		return $this->_libele;
+	public function getLibelle(){
+		return $this->_libelle;
 	}
 
-	public function setLibele(string $libele){
-		$this->_libele = $libele;
+	public function setLibelle(string $libelle){
+		$this->_libelle = $libelle;
 	}
 
 	public function getSoldeini(){
@@ -70,8 +70,8 @@ Class Compte{
 
 	// toString
 
-	// public function __toString(){
-
-	// }
+	public function __toString(){
+		return "Libellé: ".$this->getLibelle()."<br/>Solde du compte: ".$this->getSoldeini()." ".$this->getDevise()."<br/>".$this->getTitulaire();
+	}
 
 }

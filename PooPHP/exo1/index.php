@@ -24,11 +24,12 @@ echo "Solde du compte2: ".$compte2->getsoldeini()."$<br/>";
 // Faire un virement
 $compte1->virement($compte2, 100);
 echo "Solde du compte1: ".$compte1->getsoldeini()."$ / ";
-echo "Solde du compte2: ".$compte2->getsoldeini()."$<br/>";
+echo "Solde du compte2: ".$compte2->getsoldeini()."$<br/><br/>";
 
 // Afficher un titulaire
 
-echo $titulaire1;
+echo "$titulaire1<br/><br/>";
 
 // Afficher les informations d'un compte bancaire
 
+echo "$compte1<br/><br/>";

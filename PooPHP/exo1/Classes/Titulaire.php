@@ -66,6 +66,6 @@ Class Titulaire{
 	// toString
 
 	public function __toString(){
-		return "Titulaire: ".$this->getNom()." ".$this->getPrenom()."<br/>Date de naissance: ".$this->getDatenaissance()." à ".$this->getVille()."<br/> Comptes: ".$this->getComptes();
+		return "Titulaire: ".$this->getNom()." ".$this->getPrenom()."<br/>Date de naissance: ".$this->getDatenaissance()->format('Y-m-d')."<br/>Lieu de naissance: ".$this->getVille()."<br/> Comptes: ".$this->getComptes();
 	}
 }
