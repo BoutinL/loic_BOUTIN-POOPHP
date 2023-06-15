@@ -5,8 +5,8 @@ Class Film{
 	public DateTime $_dateSortie;
 	public int $_dureeMinutes;
 	public string $_resume;
-	public Realisateur $_realisateur;
-	public Genre $_genre;
+	public array $_realisateur;
+	public array $_genre;
 
 	public function __construct(string $titre, string $dateSortie, int $dureeMinutes, string $resume){
 
@@ -68,5 +68,5 @@ Class Film{
 	public function setGenre($genre){
 		$this->_genre = $genre;
 	}
-	
+
 }
