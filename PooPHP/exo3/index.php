@@ -4,17 +4,29 @@ spl_autoload_register(function ($class_name) {
     include 'Classes/'. $class_name . '.php';
 });
 
+// Genres
+
 $genre1 = new Genre("Science Fiction");
 $genre2 = new Genre("Action");
 
-$realisateur1 = new Realisateur("Abrams", "Jeffrey Jacob", "Homme", "27-06-1966", $film1);
+// Realisateurs
+
+$realisateur1 = new Realisateur("Abrams", "Jeffrey Jacob", "Homme", "27-06-1966");
+$realisateur2 = new Realisateur("Ridley", "Scott", "Homme", "30-11-1937");
+$realisateur3 = new Realisateur("Nolan ", "Christopher", "Homme", "30-07-1970");
+$realisateur4 = new Realisateur("James ", "Wan", "Homme", "26-02-1977");
+$realisateur5 = new Realisateur("Zack ", "Snyder", "Homme", "01-03-1966");
+
+// Films
 
 $film1 = new Film("Star Wars", "19-10-1977", 121, "La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l'Etoile Noire.", $realisateur1, $genre1);
 
-$film2 = new Film("Blade Runner", "15-09-1982", 117, "En l'an 2019, un ex-policier devenu détective privé, Rick Deckard, est rappelé en service pour faire la chasse à des robots d'apparence humaine appelés 'replicants.'");
+$film2 = new Film("Blade Runner", "15-09-1982", 117, "En l'an 2019, un ex-policier devenu détective privé, Rick Deckard, est rappelé en service pour faire la chasse à des robots d'apparence humaine appelés 'replicants.'", $realisateur2, $genre1);
 
-$film3 = new Film("Interstellar", "05-11-2014", 121, "Dans un proche futur, la Terre est devenue hostile pour l'homme. Les tempêtes de sable sont fréquentes et il n'y a plus que le maïs qui peut être cultivé, en raison d'un sol trop aride. Cooper est un pilote, recyclé en agriculteur, qui vit avec son fils et sa fille dans la ferme familiale. Lorsqu'une force qu'il ne peut expliquer lui indique les coordonnées d'une division secrète de la NASA, il est alors embarqué dans une expédition pour sauver l'humanité.");
+$film3 = new Film("Interstellar", "05-11-2014", 121, "Dans un proche futur, la Terre est devenue hostile pour l'homme. Les tempêtes de sable sont fréquentes et il n'y a plus que le maïs qui peut être cultivé, en raison d'un sol trop aride. Cooper est un pilote, recyclé en agriculteur, qui vit avec son fils et sa fille dans la ferme familiale. Lorsqu'une force qu'il ne peut expliquer lui indique les coordonnées d'une division secrète de la NASA, il est alors embarqué dans une expédition pour sauver l'humanité.",$realisateur3, $genre1);
 
-$film4 = new Film("Fast & Furious 7", "01-04-2015", 140, "Cette fois la menace prend les traits d'un tueur à gages des opérations spéciales britanniques aussi insaisissable qu'impitoyable, qui n'a d'obsession que la vengeance. Commençant par éliminer Han sans autre forme de procès à Tokyo, puis s'attaquant à Hobbs à Los Angeles, Deckard Shaw ne s'arrêtera que lorsqu'il aura liquidé l'ensemble de l'équipe qui a fait tomber son frère, Owen Shaw, lors de leur dernière mission.");
+$film4 = new Film("Fast & Furious 7", "01-04-2015", 140, "Cette fois la menace prend les traits d'un tueur à gages des opérations spéciales britanniques aussi insaisissable qu'impitoyable, qui n'a d'obsession que la vengeance. Commençant par éliminer Han sans autre forme de procès à Tokyo, puis s'attaquant à Hobbs à Los Angeles, Deckard Shaw ne s'arrêtera que lorsqu'il aura liquidé l'ensemble de l'équipe qui a fait tomber son frère, Owen Shaw, lors de leur dernière mission.",$realisateur4, $genre2);
 
-$film5 = new Film("Sucker Punch", "01-02-2014", 110, "Suite à la mort de sa mère, une jeune fille surnommée Baby Doll est enfermée dans un hôpital psychiatrique où son beau-père prévoit la faire lobotomiser. S'inventant un monde imaginaire, elle élabore un plan afin de s'évader avec d'autres filles, qui travaillent comme escortes pour un patron violent dans un cabaret fantasmé. Dans ce monde imaginaire, Baby Doll affronte des créatures surnaturelles afin d'obtenir cinq objets qui lui permettront de s'échapper.");
+$film5 = new Film("Sucker Punch", "01-02-2014", 110, "Suite à la mort de sa mère, une jeune fille surnommée Baby Doll est enfermée dans un hôpital psychiatrique où son beau-père prévoit la faire lobotomiser. S'inventant un monde imaginaire, elle élabore un plan afin de s'évader avec d'autres filles, qui travaillent comme escortes pour un patron violent dans un cabaret fantasmé. Dans ce monde imaginaire, Baby Doll affronte des créatures surnaturelles afin d'obtenir cinq objets qui lui permettront de s'échapper.",$realisateur5, $genre2);
+
+var_dump($film1);
