@@ -1,6 +1,7 @@
 <?php
-
 Class Realisateur extends Personne{
+
+	private array $_films;
 
 	public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
 
@@ -13,6 +14,18 @@ Class Realisateur extends Personne{
 
 	}
 
+	// Getter / Setter
+
+	public function getFilms()
+	{
+		return $this->_films;
+	}
+
+	public function setFilms(array $films)
+	{
+		$this->_films = $films;
+	}
+
 	// Méthode qui ajoute un film à son réalisateur
 
 	public function ajouterFilm(Film $film){
@@ -20,6 +33,7 @@ Class Realisateur extends Personne{
 	}
 
 	// toString
+	
 	public function afficherFilmsRealisateur() : string
 	{
 		$result = "";
