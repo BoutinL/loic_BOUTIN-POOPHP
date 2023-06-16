@@ -32,6 +32,8 @@ $film5 = new Film("Sucker Punch", "01-02-2014", 110, "Suite à la mort de sa mè
 $film6 = new Film("300", "21-03-2007", 110, "En 485 avant notre ère, Xerxès succède à Darius Ier sur le trône de l'empire perse. Rapidement, les grandes cités grecques comprennent qu'une nouvelle guerre s'annonce. Athènes, Thèbes, Corinthe et Délos se rallient à Sparte qui dispose de la meilleure armée. En 480, le roi spartiate Léonidas est nommé commandant en chef de cette union militaire de la dernière chance. Lorsque la flotte perse rallie les fantassins de Xerxès, les troupes grecques prennent peur.
 ",$realisateur5, $genre2);
 
+// Réponses
+
 echo $genre2."<br/><br/>";
 
 echo $realisateur5."<br/><br/>";

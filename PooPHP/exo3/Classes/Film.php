@@ -1,12 +1,12 @@
 <?php
 Class Film{
 
-	public string $_titre;
-	public DateTime $_dateSortie;
-	public int $_dureeMinutes;
-	public string $_resume;
-	public Realisateur $_realisateur;
-	public Genre $_genre;
+	private string $_titre;
+	private DateTime $_dateSortie;
+	private int $_dureeMinutes;
+	private string $_resume;
+	private Realisateur $_realisateur;
+	private Genre $_genre;
 
 	public function __construct(string $titre, string $dateSortie, int $dureeMinutes, string $resume, Realisateur $realisateur, Genre $genre){
 
@@ -18,7 +18,6 @@ Class Film{
 		$this->_genre = $genre;
 		$this->_realisateur->ajouterFilm($this);
 		$this->_genre->ajouterFilm($this);
-
 	}
 
 	// Getter / Setter

@@ -2,8 +2,8 @@
 
 Class Genre{
 
-	public string $_type;
-	public array $_films;
+	private string $_type;
+	private array $_films;
 
 	public function __construct(string $type){
 
