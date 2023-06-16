@@ -60,4 +60,10 @@ Class Realisateur{
 		$this->_films = $films;
 	}
 
+	// Méthode qui ajoute un film à son réalisateur
+
+	public function ajouterFilm(Film $film){
+		array_push($this->_films,$film);
+	}
+
 }

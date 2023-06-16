@@ -29,5 +29,19 @@ Class Genre{
 	public function setFilms(array $films){
 		$this->_films = $films;
 	}
+
+	// Méthode qui ajoute un film à son genre
+
+	public function ajouterFilm(Film $film){
+		array_push($this->_films,$film);
+	}
+
+	// Méthode pour afficher tout les films d'un même genre
+
+	public function afficherFilmsGenre(){
+		foreach($this->_films as $film){
+			echo $film;
+		}
+	}
 	
 }

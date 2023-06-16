@@ -29,4 +29,4 @@ $film4 = new Film("Fast & Furious 7", "01-04-2015", 140, "Cette fois la menace p
 
 $film5 = new Film("Sucker Punch", "01-02-2014", 110, "Suite à la mort de sa mère, une jeune fille surnommée Baby Doll est enfermée dans un hôpital psychiatrique où son beau-père prévoit la faire lobotomiser. S'inventant un monde imaginaire, elle élabore un plan afin de s'évader avec d'autres filles, qui travaillent comme escortes pour un patron violent dans un cabaret fantasmé. Dans ce monde imaginaire, Baby Doll affronte des créatures surnaturelles afin d'obtenir cinq objets qui lui permettront de s'échapper.",$realisateur5, $genre2);
 
-var_dump($film1);
+$genre1->afficherFilmsGenre();
