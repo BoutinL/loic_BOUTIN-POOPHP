@@ -32,7 +32,7 @@ Class Film{
 	}
 
 	public function getDateSortie(){
-		return $this->$dateSortie;
+		return $this->_dateSortie;
 	}
 
 	public function setDateSortie(){
@@ -69,6 +69,10 @@ Class Film{
 
 	public function setGenre($genre){
 		$this->_genre = $genre;
+	}
+
+	public function __toString(){
+		return $this->_titre." (".$this->getDateSortie()->format("Y").")";
 	}
 	
 }

@@ -35,13 +35,18 @@ Class Genre{
 	public function ajouterFilm(Film $film){
 		array_push($this->_films,$film);
 	}
-
-	// Méthode pour afficher tout les films d'un même genre
-
-	public function afficherFilmsGenre(){
-		foreach($this->_films as $film){
-			echo $film;
-		}
-	}
 	
+	// toString
+	public function afficherFilmsGenre() : string
+	{
+		$result = "";
+		foreach($this->_films as $film){
+			$result .= $film ."<br/>";
+		}
+		return $result;
+	}
+
+	public function __toString(){
+		return "Liste de films du genre: ".$this->getType()."<br/>".$this->afficherFilmsGenre();
+	}
 }

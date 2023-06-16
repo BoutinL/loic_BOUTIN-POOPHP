@@ -66,4 +66,18 @@ Class Realisateur{
 		array_push($this->_films,$film);
 	}
 
+	// toString
+	public function afficherFilmsRealisateur() : string
+	{
+		$result = "";
+		foreach($this->_films as $film){
+			$result .= $film ."<br/>";
+		}
+		return $result;
+	}
+
+	public function __toString(){
+		return "Liste de films du Réalisateur: ".$this->getNom()." ".$this->getPrenom()."<br/>".$this->afficherFilmsRealisateur();
+	}
+
 }
