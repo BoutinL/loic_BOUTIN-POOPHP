@@ -16,6 +16,8 @@ Class Personne{
 
 	}
 
+	// Getter / Setter
+
 	public function getNom(){
 		return $this->_nom;
 	}
@@ -45,7 +47,7 @@ Class Personne{
 	}
 
 	public function setDateNaissance(string $dateNaissance){
-		$this->_dateNaissance = $dateNaissane;
+		$this->_dateNaissance = $dateNaissance;
 	}
 	
 }

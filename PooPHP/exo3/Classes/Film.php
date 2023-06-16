@@ -34,7 +34,7 @@ Class Film{
 		return $this->_dateSortie;
 	}
 
-	public function setDateSortie(){
+	public function setDateSortie($dateSortie){
 		$this->_dateSortie = $dateSortie;
 	}
 
@@ -58,7 +58,7 @@ Class Film{
 		return $this->_realisateur;
 	}
 
-	public function setRealisateur(){
+	public function setRealisateur($realisateur){
 		$this->_realisateur = $realisateur;
 	}
 
@@ -73,5 +73,4 @@ Class Film{
 	public function __toString(){
 		return $this->_titre." (".$this->getDateSortie()->format("Y").")";
 	}
-	
 }

@@ -38,7 +38,7 @@ Class Titulaire{
 	}
 
 	public function setDatenaissance(DateTime $datenaissance){
-		$this->_datenaissace = $datenaissance;
+		$this->_datenaissance = $datenaissance;
 	}
 
 	public function getVille(){

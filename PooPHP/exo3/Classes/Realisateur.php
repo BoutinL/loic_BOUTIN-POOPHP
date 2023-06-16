@@ -6,10 +6,6 @@ Class Realisateur extends Personne{
 	public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
 
 		parent::__construct($nom, $prenom, $sexe, $dateNaissance);
-		$this->_nom = $nom;
-		$this->_prenom = $prenom;
-		$this->_sexe = $sexe;
-		$this->_dateNaissance = new DateTime($dateNaissance);
 		$this->_films = [];
 
 	}
@@ -25,6 +21,8 @@ Class Realisateur extends Personne{
 	{
 		$this->_films = $films;
 	}
+
+	
 
 	// Méthode qui ajoute un film à son réalisateur
 

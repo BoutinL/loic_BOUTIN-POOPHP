@@ -5,7 +5,7 @@ Class Role{
 	private string $_nomPersonnage;
 	private Acteur $_acteur;
 
-	public function __construct(string $nomPersonnage){
+	public function __construct(string $nomPersonnage, Acteur $acteur){
 		$this->_nomPersonnage = $nomPersonnage;
 		$this->_acteur = $acteur;
 	}
@@ -24,10 +24,10 @@ Class Role{
 		return $this->_acteur;
 	}
 
-	public function setActeur(string $nomActeur){
+	public function setActeur(string $acteur){
 		$this->_acteur = $acteur;
 	}
 
 	// toString
-	
+
 }

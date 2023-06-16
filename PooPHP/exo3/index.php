@@ -34,6 +34,6 @@ $film6 = new Film("300", "21-03-2007", 110, "En 485 avant notre ère, Xerxès su
 
 // Réponses
 
-echo $genre2."<br/><br/>";
+echo $genre1."<br/><br/>";
 
 echo $realisateur5."<br/><br/>";
