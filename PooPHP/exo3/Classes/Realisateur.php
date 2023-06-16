@@ -80,4 +80,4 @@ Class Realisateur{
 		return "Liste de films du Réalisateur: ".$this->getNom()." ".$this->getPrenom()."<br/>".$this->afficherFilmsRealisateur();
 	}
 
-}
+} 
