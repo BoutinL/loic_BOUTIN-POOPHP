@@ -7,6 +7,7 @@ Class Film{
 	private string $_resume;
 	private Realisateur $_realisateur;
 	private Genre $_genre;
+	private Casting $_casting;
 
 	public function __construct(string $titre, string $dateSortie, int $dureeMinutes, string $resume, Realisateur $realisateur, Genre $genre){
 
@@ -18,6 +19,7 @@ Class Film{
 		$this->_genre = $genre;
 		$this->_realisateur->ajouterFilm($this);
 		$this->_genre->ajouterFilm($this);
+		$this->_casting->ajouterFilmCasting($this);
 	}
 
 	// Getter / Setter

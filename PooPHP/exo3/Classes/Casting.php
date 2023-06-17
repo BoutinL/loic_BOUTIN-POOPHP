@@ -4,11 +4,13 @@ Class Casting{
     private Film $_film;
     private Acteur $_acteur;
     private Role $_role;
+    private array $_casting;
 
     public function __construct(Film $film, Acteur $acteur, Role $role){
         $this->_film = $film;
         $this->_acteur = $acteur;
         $this->_role = $role;
+        $this->_casting = [];
     }
 
     // Getter / Setter
@@ -36,5 +38,12 @@ Class Casting{
     public function SetRole($role){
         $this->_role = $role;
     }
+
+    // Méthode qui ajoute un film à un casting
+
+	public function ajouterFilmCasting(Film $film){
+		array_push($this->_casting, $film);
+	}
+
 
 }
