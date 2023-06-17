@@ -27,7 +27,7 @@ Class Realisateur extends Personne{
 	// Méthode qui ajoute un film à son réalisateur
 
 	public function ajouterFilm(Film $film){
-		array_push($this->_films,$film);
+		array_push($this->_films, $film);
 	}
 
 	// toString

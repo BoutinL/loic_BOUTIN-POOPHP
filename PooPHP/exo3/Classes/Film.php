@@ -70,6 +70,8 @@ Class Film{
 		$this->_genre = $genre;
 	}
 
+	// ToString 
+
 	public function __toString(){
 		return $this->_titre." (".$this->getDateSortie()->format("Y").")";
 	}
