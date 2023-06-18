@@ -4,10 +4,12 @@ Class Role{
 	
 	private string $_nomPersonnage;
 	private Acteur $_acteur;
+	private Casting $_casting;
 
 	public function __construct(string $nomPersonnage, Acteur $acteur){
 		$this->_nomPersonnage = $nomPersonnage;
 		$this->_acteur = $acteur;
+		$this->_casting->ajouterRoleCasting($this);
 	}
 
 	// Getter / Setter

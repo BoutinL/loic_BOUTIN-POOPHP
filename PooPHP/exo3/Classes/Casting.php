@@ -45,5 +45,17 @@ Class Casting{
 		array_push($this->_casting, $film);
 	}
 
+    // Méthode qui ajoute un role à un casting
+
+	public function ajouterRoleCasting(Role $role){
+		array_push($this->_casting, $role);
+	}
+
+    // Méthode qui ajoute un acteur à un casting
+
+	public function ajouterActeurCasting(Acteur $acteur){
+		array_push($this->_casting, $acteur);
+	}
+
 
 }
