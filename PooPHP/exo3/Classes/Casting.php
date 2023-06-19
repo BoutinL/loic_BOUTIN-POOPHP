@@ -9,9 +9,9 @@ Class Casting{
         $this->_film = $film;
         $this->_acteur = $acteur;
         $this->_role = $role;
-        $this->_castings->ajouterFilmCasting($this);
-        $this->_casting->ajouterRoleCasting($this);
-        $this->_casting->ajouterActeurCasting($this);
+        $this->_film->ajouterFilmCasting($this);
+        $this->_role->ajouterRoleCasting($this);
+        $this->_acteur->ajouterActeurCasting($this);
     }
 
     // Getter / Setter
@@ -39,5 +39,5 @@ Class Casting{
     public function SetRole($role){
         $this->_role = $role;
     }
-
+    
 }

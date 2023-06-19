@@ -82,11 +82,24 @@ Class Film{
 		$this->_castings = $_castings;
 	}
 
-	// Méthode qui ajoute un casting à un film
+	// Méthode qui ajoute un film à un casting
 
-	public function ajouterFilmCasting(Film $film){
-		array_push($this->_castings, $film);
+	public function ajouterFilmCasting(Casting $_casting){
+		array_push($this->_castings, $_casting);
 	}
+
+	// Méthode qui affiche la liste des roles d'un film
+
+	public function listingRole() 
+	{
+
+		echo "Dans le film ".$this->getTitre()." :<br/>";
+		foreach($this->_castings as $casting){
+			echo $casting->getRole()->getNomPersonnage()." est incarner par ".$casting->getActeur()->getNom()." ".$casting->getActeur()->getPrenom()."<br/>";
+		}
+		echo"<br/><br/>";
+
+	} 
 
 	// ToString 
 

@@ -22,10 +22,28 @@ Class Acteur extends Personne{
 		$this->_castings = $_castings;
 	}
 
-	// Méthode qui ajoute un casting à un acteur
+	// Méthode qui ajoute un acteur à un casting
 
-	public function ajouterActeurCasting(Acteur $acteur){
-		array_push($this->_castings, $acteur);
+	public function ajouterActeurCasting(Casting $_casting){
+		array_push($this->_castings, $_casting);
 	}
+
+	// Méthode qui affiche la liste de films d'un acteur (Faire un foreach pour afficher les films)
+
+	public function listingFilms() 
+	{
+		echo "Liste des films dans lesquels ".$this->getNom()." ".$this->getPrenom()." joue :<br/>";
+		foreach($this->_castings as $casting){
+			echo $casting->getFilm()->getTitre()."<br/>";
+		}
+		echo"<br/><br/>";
+
+	} 
+
+	// toString
+	
+	// public function __toString(){
+	// 	return $this->_nom." ".$this->_prenom." ".$this->_sexe." ".$this->_dateNaissance->format("d-m-Y");
+	// }
 
 }

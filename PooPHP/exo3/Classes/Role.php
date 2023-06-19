@@ -32,12 +32,29 @@ Class Role{
 		$this->_castings = $_castings;
 	}
 
-	// Méthode qui ajoute un casting à un role
+	// Méthode qui ajoute un role à un casting
 
-	public function ajouterRoleCasting(Role $role){
-		array_push($this->_castings, $role);
+	public function ajouterRoleCasting(Casting $_casting){
+		array_push($this->_castings, $_casting);
 	}
 
-	// toString
+	// Méthode qui affiche la liste des acteurs ayant joué un role précis
+
+	public function listingActeurRole() 
+	{
+
+		echo "Les acteurs ayant incarné ".$this->getNomPersonnage()." sont:<br/>";
+		foreach($this->_castings as $casting){
+			echo $casting->getActeur()->getNom()." ".$casting->getActeur()->getPrenom()."<br/>";
+		}
+		echo"<br/><br/>";
+
+	} 
+
+	// ToString 
+
+	// public function __toString(){
+	// 	return $this->_nomPersonnage;
+	// }
 
 }

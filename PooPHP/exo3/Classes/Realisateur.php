@@ -22,8 +22,6 @@ Class Realisateur extends Personne{
 		$this->_films = $films;
 	}
 
-	
-
 	// Méthode qui ajoute un film à son réalisateur
 
 	public function ajouterFilm(Film $film){
