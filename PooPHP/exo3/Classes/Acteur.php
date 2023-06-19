@@ -1,27 +1,31 @@
 <?php
 Class Acteur extends Personne{
 
-	private array $_roles;
-	private Casting $_casting;
+	private array $_castings;
 	
 	public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
 
 		parent::__construct($nom, $prenom, $sexe, $dateNaissance);
-		$this->_roles = [];
-		$this->_casting->ajouterActeurCasting($this);
-
+		$this->_castings = [];
 
 	}
 
 	// Getter / Setter
 
-	public function getRoles()
+	public function getCastings()
 	{
-		return $this->_roles;
+		return $this->_castings;
 	}
 
-	public function setRoles(array $roles)
+	public function setCastings($_castings)
 	{
-		$this->_roles = $roles;
+		$this->_castings = $_castings;
 	}
+
+	// Méthode qui ajoute un casting à un acteur
+
+	public function ajouterActeurCasting(Acteur $acteur){
+		array_push($this->_castings, $acteur);
+	}
+
 }

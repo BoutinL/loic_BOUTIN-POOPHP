@@ -38,4 +38,3 @@ echo $genre1."<br/><br/>";
 
 echo $realisateur5."<br/><br/>";
 
-$casting1 = new Casting($film, $acteur, $role);

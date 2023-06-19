@@ -3,31 +3,39 @@
 Class Role{
 	
 	private string $_nomPersonnage;
-	private Acteur $_acteur;
-	private Casting $_casting;
+	private array $_castings;
 
-	public function __construct(string $nomPersonnage, Acteur $acteur){
+	public function __construct(string $nomPersonnage){
 		$this->_nomPersonnage = $nomPersonnage;
-		$this->_acteur = $acteur;
-		$this->_casting->ajouterRoleCasting($this);
+		$this->_castings = [];
 	}
 
 	// Getter / Setter
 
-	public function getNomPersonnage(){
+	public function getNomPersonnage()
+	{
 		return $this->_nomPersonnage;
 	}
 
-	public function setNomPersonnage(string $nomPersonnage){
+	public function setNomPersonnage(string $nomPersonnage)
+	{
 		$this->_nomPersonnage = $nomPersonnage;
 	}
 
-	public function getActeur(){
-		return $this->_acteur;
+	public function getCastings()
+	{
+		return $this->_castings;
 	}
 
-	public function setActeur(string $acteur){
-		$this->_acteur = $acteur;
+	public function setCastings($_castings)
+	{
+		$this->_castings = $_castings;
+	}
+
+	// Méthode qui ajoute un casting à un role
+
+	public function ajouterRoleCasting(Role $role){
+		array_push($this->_castings, $role);
 	}
 
 	// toString
