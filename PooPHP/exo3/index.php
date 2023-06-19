@@ -55,7 +55,7 @@ $casting2 = new casting($film1, $acteur2, $role2);
 $casting3 = new casting($film1, $acteur3, $role3);
 
 // casting test
-$casting4 = new casting($film0, $acteur0, $role0);
+$casting4 = new casting($film0, $acteur1, $role0);
 $casting5 = new casting($film1, $acteur0, $role1);
 
 // Réponses
