@@ -27,7 +27,7 @@ $acteur2 = new Acteur("Boyega","John", "Homme", "17-03-1992");
 $acteur3 = new Acteur("Driver","Adam", "Homme", "19-11-1983");
 
 // Role
-
+$role0 = new Role("0");
 $role1 = new Role("Rey");
 $role2 = new Role("Finn");
 $role3 = new Role("Kylo Ren");
@@ -55,7 +55,7 @@ $casting2 = new casting($film1, $acteur2, $role2);
 $casting3 = new casting($film1, $acteur3, $role3);
 
 // casting test
-$casting4 = new casting($film2, $acteur1, $role1);
+$casting4 = new casting($film0, $acteur0, $role0);
 $casting5 = new casting($film1, $acteur0, $role1);
 
 // Réponses
